@@ -13,6 +13,10 @@ The site is one self-contained file, `index.html`. Styling, animations, fonts (I
 | `apple-touch-icon.png` | Icon when the site is saved to a phone home screen |
 | `sitemap.xml` | Lets Google Search Console index the site |
 
+## Adding the DOI to the published paper
+
+The Physica B article is live. Once you have its DOI from the ScienceDirect page (under the title, in the form `10.1016/j.physb.2026.xxxxxx`), search `index.html` for `sciencedirect.com/science/article/abs/pii/S0921452626011154` and replace that address with `https://doi.org/10.1016/j.physb.2026.xxxxxx`. A DOI link never breaks, whereas publisher URLs sometimes change. Add the volume and article number to the `<p class="ve">` line in the same block when the issue is assigned.
+
 ## Publishing
 
 1. In the **Hadisa-Portfolio** repository, click **Add file → Upload files → choose your files**, select all files, and click **Commit changes**. Files with the same name are replaced.
@@ -32,7 +36,7 @@ If you ever rename the repository, replace `https://hadisaabroo99-pixel.github.i
   ```
 
   When a paper is accepted, change the badge text (for example to `Published`) and replace "Submitted to" with the journal reference and DOI. Check with co-authors and the journal's preprint policy before posting a co-authored manuscript that is still under review.
-- **Abstracts:** only the Physica B paper shows an abstract, in `<div class="abs" id="abs-qdm">`. The other papers deliberately show no abstract and no summary of results, only the title, authors, venue, and a "Request manuscript" button, so unpublished findings stay private until each paper is timestamped on arXiv or published. To publish an abstract later, copy the `abs-t` button and `abs` panel from the Physica B entry.
+- **Abstracts:** only the published Physica B paper shows an abstract, in `<div class="abs" id="abs-qdm">`. The other papers deliberately show no abstract and no summary of results, only the title, authors, venue, and a "Request manuscript" button, so unpublished findings stay private until each paper is timestamped on arXiv or published. To publish an abstract later, copy the `abs-t` button and `abs` panel from the Physica B entry.
 - **Removing a paper:** delete its whole `<li class="pub">…</li>` block, then update the count in the facts row (search for `First author on five`).
 - **Status line:** search for `Seeking PhD positions` in `index.html`.
 - **Request buttons:** each paper's `.reqbtn` link opens an email pre-filled with that paper's title. If you change a title, update the `subject=` and `body=` text in its link too.
